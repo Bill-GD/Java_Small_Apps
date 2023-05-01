@@ -1,2 +1,2 @@
-# Java_Small_Apps
- Small apps created using Java
+# Java Small Apps
+ Small apps created using Java to practice creating GUI-based applications
