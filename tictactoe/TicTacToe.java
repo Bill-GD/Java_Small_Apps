@@ -1,3 +1,5 @@
+package tictactoe;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
@@ -112,10 +114,22 @@ class TicTacToe extends Frame {
         return squares[index];
     }
 
+    public boolean checkEmptySquare() {
+        for (Label l : squares)
+            if (l.getText().equals(""))
+                return true;
+        return false;
+    }
+
     public void opponentMove() {
         Random rand = new Random();
         while (true) {
             int index = rand.nextInt(9);
+            if (!checkEmptySquare()) {
+                gameOver = true;
+                winner.setText("Draw");
+                return;
+            }
             if (!getTextOf(index).equals(""))
                 continue;
             getLabel(index).setText(currentPlayer);
