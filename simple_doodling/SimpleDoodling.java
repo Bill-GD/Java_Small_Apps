@@ -90,7 +90,7 @@ public class SimpleDoodling extends Frame {
     public static void main(String[] args) {
         SimpleDoodling demo = new SimpleDoodling();
         demo.setSize(width, height);
-        demo.setTitle("Image Demo");
+        demo.setTitle("Simple Doodling");
         demo.setLocationRelativeTo(null);
         demo.setVisible(true);
     }
